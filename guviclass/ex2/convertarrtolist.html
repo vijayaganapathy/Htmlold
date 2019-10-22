@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+    var obj={
+        name:"balu",
+        age:23,
+        email:"vijay@gmail.com"
+    }
+    document.getElementById("content").innerHTML=convertobjecttorray(obj);
+    function convertobjecttorray(a)
+    { 
+        var o=(Object.keys(a))
+        var d=[];
+        
+        o.forEach(function(item){
+            var c=[];
+            c.push(item,a[item]);
+           //var b= a[item];
+           //return b;
+           d.push(c);
+        });       
+        return JSON.stringify(d);
+        
+    }
+    
+</script>
+</body>
+</html>

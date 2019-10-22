@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    (function cowboy(param, y = null) {
+    const x = y = param;
+    if (x && typeof x !== 'number') {
+        return console.log('Yee haaa!');
+    }
+    throw new Error(`...[horrible silence]...`);
+})("o");
+(function cowboy1(param, y = null) {
+    const x = y = param.toString;
+    if (x && typeof x !== 'number') {
+        return console.log('Yee haaa!');
+    }
+    throw new Error(`...[horrible silence]...`);
+})(0);
+(function cowboy2(param="a", y = null) {
+    const x = y = param;
+    if (x && typeof x !== 'number') {
+        console.log(x);
+        return console.log('Yee haaa!');
+    }
+    throw new Error(`...[horrible silence]...`);
+})();
+(function cowboy4(param, y = null) {
+    const x = y = param;
+    if (x && typeof x !== 'number') {
+        console.log(x);
+        return console.log('Yee haaa!');
+    }
+    throw new Error(`...[horrible silence]...`);
+})(!0);
+(function cowboy4(param, y = null) {
+    const x = y = param;
+    if (x && typeof x !== 'string') {
+        console.log(x);
+        return console.log('Yee haaa!');
+    }
+    throw new Error(`...[horrible silence]...`);
+})(7);
+(function cowboy4(param, y = null) {
+    const x = y = param;
+    if (x && typeof x == 'number') {
+        console.log(x);
+        return console.log('Yee haaa!');
+    }
+    throw new Error(`...[horrible silence]...`);
+})(10);
+
+var b=7;
+if(b){
+    console.log("hi");
+}
+</script>
+</body>
+</html>

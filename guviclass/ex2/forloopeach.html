@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <!----> <div id="content">
+
+    </div>
+    <form action="" onsubmit="function1();return false">
+    <input type="text" id="val1" required>
+    <input type="text" id="val2" required>
+    <input type="submit" value="ADD">
+    <input type="submit" value="SUB"onclick="subtraction()">
+    <input type="submit" value="MUL"onclick="Multiplication()">
+    <input type="submit" value="DIV"onclick="Division()">
+    <button type="submit" onsubmit="subtraction();">SUB2</button>
+    <button type="submit" onsubmit="Division();"value="DIV2">
+    <!--<input type="button" onclick="Multiplication();" value="MUL2">-->
+   <!--<button type="submit" onsubmit="subtraction();">SUB2</button>-->     
+  <script>
+      function function1(){
+          var a=parseInt(document.getElementById("val1").value);
+          var b=parseInt(document.getElementById("val2").value);
+          var res=a+b;
+          document.getElementById("content").innerHTML=res;
+          document.getElementById("val1").value="";
+          document.getElementById("val2").value="";
+      }
+      function subtraction(){
+        var a=parseInt(document.getElementById("val1").value);
+          var b=parseInt(document.getElementById("val2").value);
+          var res=a-b;
+          document.getElementById("content").innerHTML=res;
+      }
+      function Multiplication(){
+        var a=parseInt(document.getElementById("val1").value);
+          var b=parseInt(document.getElementById("val2").value);
+          var res=a*b;
+          document.getElementById("content").innerHTML=res;
+          document.getElementById("val1").value="";
+          document.getElementById("val2").value="";
+
+      }function Division(){
+        var a=parseInt(document.getElementById("val1").value);
+          var b=parseInt(document.getElementById("val2").value);
+          var res=a/b;
+          document.getElementById("content").innerHTML=res;
+          document.getElementById("val1").value="";
+          document.getElementById("val2").value="";
+
+      }
+      
+
+    //var data=[
+       // {
+           // name:vijay,
+            //age:43
+       // }
+       // {
+           // name:kumar,
+           // age:23
+        //}
+   // ]
+    //data.forEach(function(item){
+        //document.getElementById("content").innerHTML+=item.name+"-"+item.age+"<br>";
+    //})
+    </script>      
+</body>
+</html>

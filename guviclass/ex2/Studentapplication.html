@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgba(41, 65, 75, 0.267);
+            margin: 20px;
+        }
+        h1{
+            text-align: center
+        }
+        input{
+            margin: 20px;
+        }
+        form{
+            margin: 20px
+        }
+        select{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+        <h1 >Online Registration</h1>
+        <input type="text" id="inp1" placeholder="Name">
+        <input type="text" id="inp2" placeholder="E_mail">
+        <input type="text" id="inp3" placeholder="DOB">
+        <input type="text" id="inp4" placeholder="Address"><br>
+        <input type="text" id="inp5" placeholder="Phone"><br>
+        <form>Gender
+            <input type="radio"name="gender" value="Male" checked>Male
+            <input type="radio"name="gender" value="Female">Female
+    
+        </form>
+    
+        
+        <input type="text" id="inp6" placeholder="Year of passing">
+        
+        <select aria-placeholder="City">
+            <option value="pondy">pondicherry</option>
+            <option value="chen">Chennai</option>
+        </select>
+        <select aria-placeholder="State">
+                <option value="pondy">pondicherry</option>
+                <option value="chen">Tamil Nadu</option>
+            </select>
+            <select aria-placeholder="Country">
+                    <option value="pondy">India</option>
+                    <option value="chen">Americ</option>
+                </select>
+            <input type="submit" id="sub1" onsubmit="Submit()">
+            <div></div>
+            <script>
+                    function Submit(){
+                        var data={
+                            Name:document.getElementById("id1").value,
+                            DOb:document.getElementById("id2").value
+                        }
+                        var xhttp=new XMLHttpRequest();
+                        
+                        xhttp.onreadystatechange=function()
+                            {
+                            //if(this.readyState==4 && this.status==200) or
+                            if(xhttp.readyState==4 && xhttp.status==200)
+                              {
+                               
+                               if(xhttp.status==404){
+                                   console.log("Resourse not found");
+                               }
+                            }
+                        };
+                        xhttp.open("GET","http:"+searchelement,true);
+                    xhttp.send();
+                    } 
+                </script> 
+    
+</body>
+</html>

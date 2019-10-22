@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+    var obj={
+        name:"balu",
+        age:23,
+        email:"vijay@gmail.com"
+    }
+    document.getElementById("content").innerHTML=printallvalues(obj);
+    function printallvalues(a)
+    { 
+        var o=(Object.keys(a))
+        //var c=[];
+        //o.forEach(function(item){
+           // c.push(a[item]);
+           //var b= a[item];
+           //return b;
+       // });
+        return o;
+    }
+
+
+    </script>
+</body>
+</html>

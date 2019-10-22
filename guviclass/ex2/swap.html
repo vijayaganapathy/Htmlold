@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text1"> this is div 1</div>
+    <div id="text2">this is div 2</div>
+    <button onclick="swap()">SWAP</button>
+    <script>
+
+        function swap(){
+            var a=document.getElementById("text1").innerHTML;
+            var b=document.getElementById("text2").innerHTML;
+            document.getElementById("text1").innerHTML=b;
+            document.getElementById("text2").innerHTML=a;
+        }
+
+    </script>    
+</body>
+</html>

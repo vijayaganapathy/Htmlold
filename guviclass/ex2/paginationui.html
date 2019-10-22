@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="paginationuicss.css">
+</head>
+<body>
+    <h1>User Details</h1>
+        <div id="output"></div>
+    
+            <ul>
+                    <li><a href="#"><</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">></a></li>
+                </ul>
+  
+    
+    <script>
+            // Initializing arrays
+            var obj1 =[
+    {
+        name:"vijay",
+        age:25,       
+    },
+    {
+        name:"vijay2",
+        age:25,       
+    },
+    {
+        name:"vijay3",
+        age:25,       
+    },
+    {
+        name:"vijay4",
+        age:25,       
+    },
+    {
+        name:"balu",
+        age:23,       
+    }
+    ]        
+            // Getting output element
+            var output = document.getElementById('output');
+        
+            // Creating table tags
+            var table = '<table align="center"><thead><tr><th>ID</th><th>Name</th><th>Email</th></tr></thead><tbody>';
+        
+            //for (var i = 0; i < users.length; i++) {
+            //  table += "<tr><td>" + (i + 1) + "</td><td>" + users[i] + "</td><td>" + ages[i] + "</td><td>" + emails[i] + "</td></tr>";
+           // }
+           for (var i = 0; i < 5; i++) {
+              table += "<tr><td>" + (i + 1) + "</td><td>" + obj1[i].age + "</td><td>" +  obj1[i].name + "</td></tr>";
+            }
+        
+            table += "</tbody></table>";
+            
+            // Binding output element with table var
+            output.innerHTML = table;
+          </script>
+</body>
+</html>

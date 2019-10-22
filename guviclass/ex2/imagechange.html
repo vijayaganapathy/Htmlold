@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image changeover</title>
+    <style>
+            #img{
+                width: 35%;
+                height: 40%;
+                margin: 0px auto;
+                display: block;
+                }
+    </style>
+<body>
+    <img  src="https://tse3.mm.bing.net/th?id=OIP.dDZmvDbJwXLy5ozAcHac2gHaIB&pid=Api&P=0&w=300&h=300" onmouseover="slide()" onmouseout="stop()" id="img" src="">
+    <script>
+    //var content= document.getElementById("img");
+    var images = ["https://heroichollywood.com/wp-content/uploads/2019/04/Avengers-Endgame-Don-Cheadle-War-Machine.jpg","https://cdn.wegotthiscovered.com/wp-content/uploads/2019/04/Avengers-Endgame-Nebula-poster.jpeg","https://assets1.ignimgs.com/2019/04/03/thor-1554329380123_1280w.jpg","https://2.bp.blogspot.com/-IHN7Eqk-vn4/XL1BEs1bbGI/AAAAAAABCTA/Ny2x_K2F13A9vQl7l1KyYfkumSwUMStnACLcBGAs/s1600/Marvel%25E2%2580%2599s%2BAvengers%2BEndgame%2BTheatrical%2BOne%2BSheet%2BCharacter%2BMovie%2BPoster%2BSet%2B%25285%2529.jpg","https://media.comicbook.com/2019/04/avengers-endgame-posters-05-1165596.jpeg","https://cdn.movieweb.com/img.site/PH3vNDJc4xhF69_1_l.jpg","https://cdn.wegotthiscovered.com/wp-content/uploads/2019/04/Avengers-Endgame-Iron-Man-poster.jpeg"];
+    var index=0;
+    function slide(){
+        function changeImage(){       
+        //content.setAttribute("src",images[index]);
+        document.getElementById("img").src=images[index];        
+    index++;
+    if(index==images.length){
+    index=0;
+    }   
+}
+    execute=setInterval(changeImage,1000);
+    }
+
+    function stop(){
+        clearInterval(execute);
+    }
+</script>
+</head>
+</body>
+</html>

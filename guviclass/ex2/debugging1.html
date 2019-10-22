@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+      var a={
+      a1:10,
+      b1:20
+  }
+  var b={a1:"hai",b1:"hello"};
+  var c={a1:"hai",b1:7};
+  var d={a1:true,b1:false};
+  var e={a1:[1,2,3],b1:[11,12]};
+  function add(){
+      console.log(a);
+      return this.a1+this.b1;
+  }
+   console.log(add.call(a));
+  function add1(){
+      console.log(b);
+      return this.a1+this.b1;
+  }
+  console.log(add1.call(b));
+  function add2(){
+      console.log(c);
+      return this.a1+this.b1;
+  }
+  console.log(add2.call(c));
+  function add3(){
+      console.log(d);
+      return this.a1+this.b1;
+  }
+  console.log(add3.call(d));
+  function add4(){
+      console.log(e);
+      return this.a1+this.b1;
+  }
+  console.log(add4.call(e));
+  var value={
+      a1:5,
+      b1:5
+  }
+  var c=[120,100];
+
+  function add5(l,m){
+      console.log("arraay in call fun");
+      return value.a1+value.b1+l+m;
+      //return this.a1+this.b1+l+m;
+  }
+  console.log(add5.call(value,c,10));
+  var value2={
+      a1:5,
+      b1:5
+  }
+  var d=[120,100];
+  function add6(l){
+      console.log("arraay in apply fun");
+      console.log();
+      return value2.a1+value2.b1+l;
+      //return this.a1+this.b1+l+m;
+  }
+  console.log(add6.apply(value2,d));
+  var value2={
+      a1:5,
+      b1:5
+  }
+ var v=[120,100];
+  function add6(l){
+      console.log(value);
+      return value2.a1+value2.b1+l;
+      //return this.a1+this.b1+l+m;
+  }
+  console.log(add6.apply(value2,[v]));
+  //console.log(add6.apply(value2,120));<-objects and arrays type arrguments are used in apply function
+  </script>  
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="newpagination.css">
+</head>
+<body onload="func1(1)">
+    <div>
+        <table id="data"></table>
+        <ul id="clickbut" ></ul>
+    </div>
+    <script src="userinfo.js"></script>
+    <script>
+    //for(var i=0;i<5;i++)
+    //{
+       // var esc1;
+        //esc1 +='<tr><td>'+userinfo[i].id+'</td><td>'+userinfo[i].name+'</td><td>'+userinfo[i].email+'</td></tr>';
+        //document.getElementById("data").innerHTML="<th>ID</th><th>NAME</th><th>EMAIL</th>"+esc1;
+    //}
+    var val ="";
+    for(var i=1;i<=Math.ceil(userinfo.length/5);i++){
+        val +='<button onclick="func1('+i+')">'+i+'</button>';
+    }
+    document.getElementById("clickbut").innerHTML="<li><button><</button></li><li>"+val+"</li><li><button>&raquo</button></li>";
+    function func1(n)
+    {
+        //var i=0;
+        var n=n*5;
+        var b=n-5;
+        var esc="";
+        for(var i=b;i<n;i++)
+        {
+            esc +='<tr><td>'+userinfo[i].id+'</td><td>'+userinfo[i].name+'</td><td>'+userinfo[i].email+'</td></tr>';
+            document.getElementById("data").innerHTML="<th>ID</th><th>NAME</th><th>EMAIL</th>"+esc;
+        }
+
+    }
+    
+    </script>   
+</body>
+</html>

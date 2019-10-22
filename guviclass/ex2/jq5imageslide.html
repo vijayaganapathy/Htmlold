@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Image changeover</title>
+    <style>
+        body{
+            text-align: center;
+        }
+            #id1{
+                width: 35%;
+                height: 40%;
+                display: block; 
+                }
+    </style>
+<body>
+    <table>
+        <tr>
+            <td>
+                    <input type="button" id="bt1" value="<" style="margin-left: 200px; width: 50px;height: 50px;">
+            </td>
+            <td>
+                    <div id="id1" style="background: blueviolet"></div> 
+            </td> 
+            <td>
+                    <input type="button" id="bt2" value=">"style=" width: 50px;height: 50px;">
+            </td>
+                
+                
+        </tr>
+    </table>
+    
+    <script>
+    $(document).ready(function() {
+        var images = ["https://cdn.pixabay.com/photo/2014/07/16/05/18/beach-394503_960_720.jpg","https://cdn.pixabay.com/photo/2016/03/10/18/44/top-view-1248955_960_720.jpg","https://cdn.pixabay.com/photo/2017/09/16/19/33/parrot-2756488_960_720.jpg","https://cdn.pixabay.com/photo/2016/09/08/22/43/books-1655783_960_720.jpg","https://cdn.pixabay.com/photo/2019/09/04/20/34/plantation-4452538_960_720.jpg","https://cdn.pixabay.com/photo/2014/11/21/17/27/frog-540812_960_720.jpg"];
+         $("#id1").html("<img src="+images[0]+">");
+         var index=1;
+         $("#bt1").click(function(){
+            $("#id1").html("<img src="+images[index-1]+">");
+            index--;
+            if(index==0){
+                index=1;
+                } 
+          });
+          $("#bt2").click(function(){
+            $("#id1").html("<img src="+images[index]+">");
+            index++;
+            if(index==images.length){
+                index=images.length-1;
+                } 
+        });
+ });
+    </script>
+</body>
+</html>

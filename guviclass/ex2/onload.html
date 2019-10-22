@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=B, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="id1" onclick="fun1()">click</button>
+    <button id="id1" onclick="fun2()">click</button>
+    <script>
+    var number=1;
+    function fun1(){
+        document.getElementById("id1").innerHTML=number;
+    }
+    function fun2(){
+        window.open("onload.html","_self");
+        number+=20;
+    }
+
+    </script>
+</body>
+</html>

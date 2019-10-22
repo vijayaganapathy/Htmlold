@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1 >Online Registration</h1>
+        <input type="text" id="inp1" placeholder="Name">
+        <input type="text" id="inp3" placeholder="DOB">
+        <input type="button" id="sub1" onclick="fun1()" value="Submit">
+        <div id="div1" style="background: cornflowerblue; width: 100px; height: 100px;" ></div>
+        <script>
+        function fun1()
+        {
+                        var data={
+                            Name:document.getElementById("inp1").value,
+                            DOb:document.getElementById("inp3").value
+                        }
+                        console.log(data);
+                        document.getElementById("div1").innerHTML=JSON.stringify(data);
+                        var xhttp=new XMLHttpRequest();
+                       
+                        xhttp.onreadystatechange=function()
+                            {
+                            //if(this.readyState==4 && this.status==200) or
+                            if(xhttp.readyState==4 && xhttp.status==200)
+                              {
+                               alert("success");
+                               if(xhttp.status==404){
+                                   console.log("Resourse not found");
+                               }
+                            }
+                        };
+                        xhttp.open("POST","http://localhost:3000/createuser",true);
+                        xhttp.setRequestHeader("content-type","application/json;charset=UTF-8")
+                    xhttp.send(JSON.stringify(data));
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+    var arr=["guvi","i","am","geek"]
+    document.getElementById("content").innerHTML=convertarraytoobject(arr);
+    function convertarraytoobject(obj)
+    { 
+            var c={};
+            var key=obj[0];
+            var value=obj[obj.length-1];
+             c[key]=value;
+            //c.push(key,value);      
+        return JSON.stringify(c);
+        
+    }
+    
+</script>
+</body>
+</html>

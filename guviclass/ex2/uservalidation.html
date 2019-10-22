@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>LOGIN</h1>
+        <div background="blue"> 
+            <input type="text" id="Email" placeholder="example">
+            <input type="text" id="Password"><br>
+            <button onclick="validate()">SUBMIT</button>
+        </div>
+        <script>
+    
+            function validate(){
+                var mail=document.getElementById("Email").value;
+                var pas=document.getElementById("Password").value;
+                //var paspattern=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+                var Emailpattern=/^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/;
+                //pasval(pas)==true)
+                //&&(paspattern.test(pas))
+                if((Emailpattern.test(mail))&&(pasval(pas))==true)
+                {
+                    alert("Login Successfull");
+                }else{
+                    alert("invalid");
+                }
+               
+                //document.getElementById("ans").innerHTML=mail+pas;
+            }
+           function pasval(pas1){
+                //var arr=['!','@','#','$','%','^','&','*'];
+                //&&(arr[length-1].match(arr))
+                var len=pas1.length;
+                var lastnum=pas1.charAt(len-1);
+                   if((pas1.length==8)&&((lastnum=='!')||(lastnum=='@')||(lastnum=='#')||(lastnum=='$')||(lastnum=='&'))){
+                      return true;
+                   }else{
+                       return false;
+                   }
+                }
+        </script> 
+</body>
+</html>

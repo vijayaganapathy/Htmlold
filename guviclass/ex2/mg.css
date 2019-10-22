@@ -1,0 +1,24 @@
+body{
+    background-color:#f5eeda;
+}
+.dot {
+    height: 150px;
+    width: 150px;
+    background-color: #bbb;
+    border-radius: 100%;
+    display: inline-block;
+    margin-top: 10%;
+  }
+  table,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width:25px;
+  }
+   td {
+    padding: 5px;
+    text-align: left;    
+  }
+ table{
+     margin:auto;
+     margin-top: 5%;
+ }

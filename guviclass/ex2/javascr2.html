@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content1"></div>
+    <div id="content2"></div>
+    <div id="content3"></div>
+    <button onclick="function1()">swap</button>
+    <button onclick="function2()">STRING</button>
+  <script>
+      var a="hello";
+  var b="india";
+  var c={
+      h="country",
+      d=5
+  }
+  document.getElementById("content1").innerHTML="<h1>Hello</h1>" 
+  document.getElementById("content2").innerHTML="<h1>world</h1>"
+  function function1(){
+      var a=document.getElementById("content1").innerText;
+      var b=document.getElementById("content2").innerText;
+      document.getElementById("content1").innerHTML=a; 
+     document.getElementById("content2").innerHTML=b;
+
+  }
+  function function2(){
+    document.getElementById("content3").innerHTML= a+b+ "how are you"+h;
+  }
+  
+
+
+
+  </script>  
+</body>
+</html>

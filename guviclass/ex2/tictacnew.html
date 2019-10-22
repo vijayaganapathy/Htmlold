@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+            padding: 20px;
+        }
+     td{ 
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        font-size: 50px;
+        
+    }
+    table{
+        margin-left: 35%;
+    }
+    td:hover{
+        background: rgb(223, 46, 114);
+    }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 70px; margin-left: 42%">XOX</h1>
+        <table border="1px">
+                <tr><td id="id1" onclick="fun1()"></td><td id="id2" onclick="fun2()"></td><td id="id3" onclick="fun3()"></td></tr>
+                <tr><td id="id4" onclick="fun4()"></td><td id="id5" onclick="fun5()"></td><td id="id6" onclick="fun6()"></td></tr>
+                <tr><td id="id7" onclick="fun7()"></td><td id="id8" onclick="fun8()"></td><td id="id9" onclick="fun9()"></td></tr>
+        </table>
+        <button onclick="replay()" style="font-size: 30px; background: chartreuse; width: 300px;margin-top: 20px; height: 100px; margin-left: 36%">Play Again</button>
+        <script>
+         var value="X";
+        function fun1(){
+            var displyvalue=document.getElementById("id1").innerHTML;
+            if((displyvalue=="X")||(displyvalue=="O"))
+            {
+                document.getElementById("id1").innerHTML=displyvalue;
+            }else{
+                if(value=='X'){
+                 document.getElementById("id1").innerHTML=value;
+                 document.getElementById("id1").style.background="lightpink";
+                 result();
+                 value="O";
+             }else{
+                document.getElementById("id1").innerHTML=value;
+                document.getElementById("id1").style.background="lightgrey";
+                result();
+                 value="X";
+             }
+
+            }
+         }
+         function fun2(){
+            var displyvalue=document.getElementById("id2").innerHTML;
+            if((displyvalue=="X")||(displyvalue=="O"))
+            {
+                document.getElementById("id2").innerHTML=displyvalue;
+            }else{
+                if(value=='X'){
+                 document.getElementById("id2").innerHTML=value;
+                 document.getElementById("id2").style.background="lightpink";
+                 result();
+                 value="O";
+             }else{
+                document.getElementById("id2").innerHTML=value;
+                document.getElementById("id2").style.background="lightgrey";
+                result();
+                 value="X";
+             }
+            }
+         }
+         function fun3(){
+            var displyvalue=document.getElementById("id3").innerHTML;
+            if((displyvalue=="X")||(displyvalue=="O"))
+            {
+                document.getElementById("id3").innerHTML=displyvalue;
+            }else{
+                if(value=='X'){
+                 document.getElementById("id3").innerHTML=value;
+                 document.getElementById("id3").style.background="lightpink";
+                 result();
+                 value="O";
+             }else{
+                document.getElementById("id3").innerHTML=value;
+                document.getElementById("id3").style.background="lightgrey";
+                result();
+                 value="X";
+             }
+            }
+         }
+         function fun4(){
+            var displyvalue=document.getElementById("id4").innerHTML;
+            if((displyvalue=="X")||(displyvalue=="O"))
+            {
+                document.getElementById("id4").innerHTML=displyvalue;
+            }else{
+                if(value=='X'){
+                 document.getElementById("id4").innerHTML=value;
+                 document.getElementById("id4").style.background="lightpink";
+                 result();
+                 value="O";
+             }else{
+                document.getElementById("id4").innerHTML=value;
+                document.getElementById("id4").style.background="lightgrey";
+                result();
+                 value="X";
+             }
+            }
+         }
+         function fun5(){
+            var displyvalue=document.getElementById("id5").innerHTML;
+            if((displyvalue=="X")||(displyvalue=="O"))
+            {
+                document.getElementById("id5").innerHTML=displyvalue;
+            }else{
+                if(value=='X'){
+                 document.getElementById("id5").innerHTML=value;
+                 document.getElementById("id5").style.background="lightpink";
+                 result();
+                 value="O";
+             }else{
+                document.getElementById("id5").innerHTML=value;
+                document.getElementById("id5").style.background="lightgrey";
+                result();
+                 value="X";
+             }
+            }
+         }
+         function fun6(){
+            var displyvalue=document.getElementById("id6").innerHTML;
+            if((displyvalue=="X")||(displyvalue=="O"))
+            {
+                document.getElementById("id6").innerHTML=displyvalue;
+            }else{
+                if(value=='X'){
+                 document.getElementById("id6").innerHTML=value;
+                 document.getElementById("id6").style.background="lightpink";
+                 result();
+                 value="O";
+             }else{
+                document.getElementById("id6").innerHTML=value;
+                document.getElementById("id6").style.background="lightgrey";
+                result();
+                 value="X";
+             }
+            }
+         }
+         function fun7(){
+            var displyvalue=document.getElementById("id7").innerHTML;
+            if((displyvalue=="X")||(displyvalue=="O"))
+            {
+                document.getElementById("id7").innerHTML=displyvalue;
+            }else{
+                if(value=='X'){
+                 document.getElementById("id7").innerHTML=value;
+                 document.getElementById("id7").style.background="lightpink";
+                 result();
+                 value="O";
+             }else{
+                document.getElementById("id7").innerHTML=value;
+                document.getElementById("id7").style.background="lightgrey";
+                result();
+                 value="X";
+             }
+            }
+         }
+         function fun8(){
+            var displyvalue=document.getElementById("id8").innerHTML;
+            if((displyvalue=="X")||(displyvalue=="O"))
+            {
+                document.getElementById("id8").innerHTML=displyvalue;
+            }else{
+                if(value=='X'){
+                 document.getElementById("id8").innerHTML=value;
+                 document.getElementById("id8").style.background="lightpink";
+                 result();
+                 value="O";
+             }else{
+                document.getElementById("id8").innerHTML=value;
+                document.getElementById("id8").style.background="lightgrey";
+                result();
+                 value="X";
+             }  
+            }
+         }
+         function fun9(){
+            var displyvalue=document.getElementById("id9").innerHTML;
+            if((displyvalue=="X")||(displyvalue=="O"))
+            {
+                document.getElementById("id9").innerHTML=displyvalue;
+            }else{
+                if(value=='X'){
+                 document.getElementById("id9").innerHTML=value;
+                 document.getElementById("id9").style.background="lightpink";
+                 result();
+                 value="O";
+             }else{
+                document.getElementById("id9").innerHTML=value;
+                document.getElementById("id9").style.background="lightgrey";
+                result();
+                 value="X";
+             }
+            }
+         }
+         function result(){
+         var displyvalue1=document.getElementById("id1").innerHTML;
+         var displyvalue2=document.getElementById("id2").innerHTML;
+         var displyvalue3=document.getElementById("id3").innerHTML;
+         var displyvalue4=document.getElementById("id4").innerHTML;
+         var displyvalue5=document.getElementById("id5").innerHTML;
+         var displyvalue6=document.getElementById("id6").innerHTML;
+         var displyvalue7=document.getElementById("id7").innerHTML;
+         var displyvalue8=document.getElementById("id8").innerHTML;
+         var displyvalue9=document.getElementById("id9").innerHTML;
+         
+         if((displyvalue1=="X"&&displyvalue2=="X"&&displyvalue3=="X")||(displyvalue1=="O"&&displyvalue2=="O"&&displyvalue3=="O")){
+             alert(displyvalue1+" Won the game");
+         }
+         else if((displyvalue1=="X"&&displyvalue4=="X"&&displyvalue7=="X")||(displyvalue1=="O"&&displyvalue4=="O"&&displyvalue7=="O")){
+             alert(displyvalue1+" Won the game");
+         }
+         else if((displyvalue1=="X"&&displyvalue5=="X"&&displyvalue9=="X")||(displyvalue1=="O"&&displyvalue5=="O"&&displyvalue9=="O")){
+             alert(displyvalue1+" Won the game");
+         }
+         else if((displyvalue4=="X"&&displyvalue5=="X"&&displyvalue6=="X")||(displyvalue4=="O"&&displyvalue5=="O"&&displyvalue6=="O")){
+             alert(displyvalue4+" Won the game");
+         }
+         else if((displyvalue7=="X"&&displyvalue8=="X"&&displyvalue9=="X")||(displyvalue7=="O"&&displyvalue8=="O"&&displyvalue9=="O")){
+             alert(displyvalue7+" Won the game");
+         }
+         else if((displyvalue3=="X"&&displyvalue6=="X"&&displyvalue9=="X")||(displyvalue3=="O"&&displyvalue6=="O"&&displyvalue9=="O")){
+             alert(displyvalue3+" Won the game");
+         }
+         else if((displyvalue2=="X"&&displyvalue5=="X"&&displyvalue8=="X")||(displyvalue2=="O"&&displyvalue5=="O"&&displyvalue8=="O")){
+             alert(displyvalue2+" Won the game");
+         }
+         else if((displyvalue3=="X"&&displyvalue5=="X"&&displyvalue7=="X")||(displyvalue3=="O"&&displyvalue5=="O"&&displyvalue7=="O")){
+             alert(displyvalue3+" Won the game");
+         }
+        //  }else if(()()()()()()()()()){
+        //     alert("game over!");
+        //  }
+         }        
+         function replay(){
+            document.getElementById("id1").style.background="";
+            document.getElementById("id2").style.background="";
+            document.getElementById("id3").style.background="";
+            document.getElementById("id4").style.background="";
+            document.getElementById("id5").style.background="";
+            document.getElementById("id6").style.background="";
+            document.getElementById("id7").style.background="";
+            document.getElementById("id8").style.background="";
+            document.getElementById("id9").style.background="";
+            document.getElementById("id1").innerHTML="";
+            document.getElementById("id2").innerHTML="";
+            document.getElementById("id3").innerHTML="";
+            document.getElementById("id4").innerHTML="";
+            document.getElementById("id5").innerHTML="";
+            document.getElementById("id6").innerHTML="";
+            document.getElementById("id7").innerHTML="";
+            document.getElementById("id8").innerHTML="";
+            document.getElementById("id9").innerHTML="";
+
+         }
+        </script>
+</body>
+</html>

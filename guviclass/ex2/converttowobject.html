@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+    var arr=[[["name","vijay"],["age",22],["email","vijay@gmail.com"]],[["name","kumar"],["age",22],["email","kumar@gmail.com"]]]
+    document.getElementById("content").innerHTML=printarraytoobject(arr);
+    function printarraytoobject(a)
+    { 
+        var bigarr=[];
+        for(var i=0;i<a.length;i++)
+        {
+        var d={};
+        a[i].forEach(function(data)
+        {
+        d[data[0]]=data[1];
+        });
+        bigarr.push(d);
+        }
+        return JSON.stringify(bigarr);            
+    }
+    
+</script>
+</body>
+</html>
+
